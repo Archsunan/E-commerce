@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Electro Gadget Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Electrolize&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #617996;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #17191b;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    header h1 {
+      font-family: "Electrolize", sans-serif;
+      font-weight: bolder;
+      font-size: 60px;
+      /* animation: slideIn 2s ease-in-out forwards; */
+      /* opacity: 0; */
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 2px;
+    }
+
+    nav a:hover {
+      color: wheat;
+      background-color: #777;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 320px;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .login-box input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #0072ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .social-btn {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .google {
+      background-color: #db4437;
+    }
+
+    .facebook {
+      background-color: #3b5998;
+    }
+
+    .or {
+      text-align: center;
+      margin: 15px 0;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="typing mx-auto d-inline-block ">ElectroGadgets</h1>
+    <nav>
+      <a href="ex.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="product.html">Products</a>
+      <a href="cont.html">Contact</a>
+      <a href="cart.html" id="cart-link">Cart</a>
+      <a href="login.html">Login</a>/
+      <a href="sign.html">SignUp</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="Username">Enter Your Username</label>
+        <input type="text" id="username" placeholder="Username" required />
+        <label for="password">Enter Your Password</label>
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+      </form>
+
+      <!-- Bootstrap Modal -->
+      <div class="modal fade" id="loginSuccessModal" tabindex="-1" aria-labelledby="loginSuccessModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+              <h5 class="modal-title" id="loginSuccessModalLabel">Login Successful</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Welcome back, <span id="usernameDisplay"></span>!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script src="auth.js"></script>
+      <script>
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          login(username, password);
+        });
+      </script>
+
+</body>
+
+</html>

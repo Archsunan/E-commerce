@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroGadgets</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Electrolize&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #dfd7d7;
+      color: #333;
+    }
+
+    header {
+      background-color: #17191b;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: "Electrolize", sans-serif;
+      font-weight: bolder;
+      font-size: 60px;
+      /* animation: slideIn 2s ease-in-out forwards; */
+      /* opacity: 0; */
+
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 2px;
+    }
+
+    nav a:hover {
+      color: wheat;
+      background-color: #777;
+
+    }
+
+    .intro,
+    .products {
+      padding: 20px;
+      text-align: cente;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+    }
+
+    footer {
+      background-color: #004466;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    #pr {
+      text-decoration: none;
+      color: black;
+    }
+
+    #ic img {
+      width: 30px;
+      height: 30px;
+    }
+
+    #of {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    #carouselExampleControls {
+      max-width: 80%;
+      margin: 20px auto;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="typing mx-auto d-inline-block ">ElectroGadgets</h1>
+    <nav>
+      <a href="ex.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="product.html">Products</a>
+      <a href="cont.html">Contact</a>
+      <a href="cart.html" id="cart-link">Cart</a>
+      <a href="login.html">Login</a>/
+      <a href="sign.html">SignUp</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h2 align="center"><b>Welcome to ElectroGadgets</b></h2>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://gphome.gumlet.io/gpcdn/promotions/holi-mobile-offers-today-gopaisa.jpg?w=400&dpr=2.6"
+            class="d-block w-100" alt="..." id="of">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://www.livemint.com/lm-img/img/2024/10/24/1600x900/amazon_sale_smartwatch_1729764236182_1729764240888.jpg"
+            class="d-block w-100" alt="..." id="of">
+        </div>
+        <div class="carousel-item">
+          <img src="https://rukminim2.flixcart.com/fk-p-flap/850/400/image/1a97512ec6a50f3a.jpg?q=90"
+            class="d-block w-100" alt="..." id="of">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+    <p align="center">Your one-stop shop for the latest electronics and gadgets.</p>
+  </section>
+
+  <section class="products">
+    <h2 align="center">Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <a href="product_details.html?id=smartphone-cat" id="pr">
+          <img src="mobile.jpg" alt="Smartphone">
+          <h3>Smartphone</h3>
+          <p>Latest 5G enabled smartphone with OLED display.</p>
+        </a>
+      </div>
+
+      <div class="product-card">
+        <a href="product_details.html?id=smartwatch-cat" id="pr">
+          <img src="shopping.webp" alt="Smartwatch">
+          <h3>Smartwatch</h3>
+          <p>Track fitness, notifications, and more.</p>
+        </a>
+      </div>
+
+      <div class="product-card">
+        <a href="product_details.html?id=smarttv-cat" id="pr">
+          <img src="tv.avif" alt="Smartwatch">
+          <h3>SmarTv</h3>
+          <p>Internet Connectivity,Voice Control, AI-Based Recommendations and more.</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <footer style="background-color: #111; color: #fff; padding: 40px 20px 10px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+        <div style="flex: 1 1 220px; margin: 10px;">
+          <h3 style="color: #00ccff;">Electro Gadget</h3>
+          <p>Your one-stop shop for the latest electronics & gadgets.</p>
+        </div>
+
+        <div style="flex: 1 1 220px; margin: 10px;">
+          <h4 style="color: #00ccff;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="ex.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+            <li><a href="product.html" style="color: #ccc; text-decoration: none;">Shop</a></li>
+            <li><a href="#" style="color: #ccc; text-decoration: none;">Deals</a></li>
+            <li><a href="cont.html" style="color: #ccc; text-decoration: none;">Support</a></li>
+          </ul>
+        </div>
+
+        <div style="flex: 1 1 220px; margin: 10px;">
+          <h4 style="color: #00ccff;">Contact Us</h4>
+          <p>Email: support@electrogadget.com</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+
+        <div style="flex: 1 1 220px; margin: 10px;">
+          <h4 style="color: #00ccff;">Follow Us</h4>
+          <div id="ic">
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=435&format=png" alt="Facebook"
+                style="width: 24px; margin-right: 10px; filter: brightness(0) invert(1);"></a>
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=32292&format=png" alt="Instagram"
+                style="width: 24px; margin-right: 10px; filter: brightness(0) invert(1);"></a>
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png" alt="Twitter"
+                style="width: 24px; margin-right: 10px; filter: brightness(0) invert(1);"></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; padding-top: 20px; border-top: 1px solid #444; font-size: 14px; color: #999;">
+        <p>&copy; 2025 Electro Gadget. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="auth.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+
+</html>

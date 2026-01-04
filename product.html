@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Electrolize&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #dfd7d7;
+            color: #333;
+        }
+
+
+        header {
+            background-color: #17191b;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: "Electrolize", sans-serif;
+            font-weight: bolder;
+            font-size: 60px;
+            /* animation: slideIn 2s ease-in-out forwards; */
+            /* opacity: 0; */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 2px;
+        }
+
+        nav a:hover {
+            color: wheat;
+            background-color: #777;
+
+        }
+
+        .product-card>img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-grid,
+        .product-sm,
+        .product-tv {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-card,
+        .product-sms,
+        .product-tvs {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            /* Standardize width to 200px */
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover,
+        .product-sms:hover,
+        .product-tvs:hover {
+            transform: translateY(8px) scale(1.03);
+        }
+
+        .product-card img,
+        .product-sms img,
+        .product-tvs img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            /* Prevent stretching */
+        }
+
+        .products {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card button,
+        .product-sms button,
+        .product-tvs button {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: orange;
+            border: none;
+            width: 100%;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="arr">
+        <header>
+            <h1 class="typing mx-auto d-inline-block ">ElectroGadgets</h1>
+            <nav>
+                <a href="ex.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="product.html">Products</a>
+                <a href="cont.html">Contact</a>
+                <a href="cart.html" id="cart-link">Cart</a>
+                <a href="login.html">Login</a>/
+                <a href="sign.html">SignUp</a>
+            </nav>
+        </header>
+        <section class="products">
+            <h2 align="center">Smartphone</h2>
+            <div class="product-grid">
+                <div class="product-card">
+
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQxy3sJEJZ1Z76NAxF92lkiY0JEyvGoc2JTTvom0hiPR1nfGfrJNHYxphCW5Es0MeOMlQ7JOcJwg7sFCrBsRaZYKrHOMnZPWNzWhY2F-v8pfC7LvppEdxCSfQ"
+                        alt="Smartphone">
+                    <h3>Motorola G05</h3>
+                    <p>Forest Green 4 GB RAM 64 GB Storage</p>
+                    <h4>₹6,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹9,999</span>
+                    </h4>
+                    <a href="product_details.html?id=moto-g05"><button>BuyNow</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSwi5YNEj7W1WXxZ4dHDraUMZwvnV2RJg-dT_z5hcFP4tCJCjxu4imhAXR4zA749FbgQQjizOH7D2GxOKceYXK-ETa2QRxj1eMVrlJ9DG-Uwl1kwfhJgCNu4aI"
+                        alt="Smartphone">
+                    <h3>Samsung M05</h3>
+                    <p>Mint Green, 4GB RAM, 64 GB Storage</p>
+                    <h4>₹10,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹15,999</span>
+                    </h4>
+                    <a href="product_details.html?id=samsung-m05"><button>BuyNow</button></a>
+
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR27jsAqcjPKMI4dE6EK-vpNUxtF8vEckBEyR0obrNH3btZg7iTkxmBdJct6QhxwtPqzsXVWltYSPHbbjKtElhUBJtlhaO5lwpuIJK-xAJVGhUOmtQdwzKM"
+                        alt="Smartphone">
+                    <h3>Nothing 3A Pro </h3>
+                    <p>Gray, 8 GB RAM, 128 GB Storage</p>
+                    <h4>₹12,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹18,999</span>
+                    </h4>
+                    <a href="product_details.html?id=nothing-3a-pro"><button>BuyNow</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTrNV5iVPSMiWrBM2KnHNdH5iJmYR2RVDkTVMCPRaQnqw4VAVQRWvANxXL1x_B-y9f8TfWV33BvL1761dRAbJ5yjjvdh7MwL-p-_IpddayuGLY_7wtKa7xL"
+                        alt="Smartphone">
+                    <h3>Redmi 14C 5g</h3>
+                    <p>Starlight Blue, 8 GB RAM, 128 GB Storage</p>
+                    <h4>₹11,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹17,999</span>
+                    </h4>
+                    <a href="product_details.html?id=redmi-14c-5g"><button>BuyNow</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://rukminim2.flixcart.com/image/1200/1200/xif0q/mobile/c/n/9/-original-imah2qyrg2xryu8m.jpeg"
+                        alt="Smartphone">
+                    <h3>POCO C61</h3>
+                    <p>Mystical Green, 4GB RAM, 64 GB Storage</p>
+                    <h4>₹7,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹11,999</span>
+                    </h4>
+                    <a href="product_details.html?id=poco-c61"><button>BuyNow</button></a>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTKhCLomg_7i9_G6hi1-cZEEDh4R3-u98pW4bsmZrpgZeXJ-bKJg1qelFDGvPBJAqX3i8eBuYDoFPCvl2v8U_dpHPriFjzkEeE-62Kf6BYAt3MlDHr48Jmr"
+                        alt="Smartphone">
+                    <h3>Redmi A5</h3>
+                    <p>sky Blue, 4GB RAM, 64 GB Storage</p>
+                    <h4>₹20,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹25,999</span>
+                    </h4>
+                    <a href="product_details.html?id=redmi-a5"><button>BuyNow</button></a>
+                </div>
+
+        </section>
+        <section class="products">
+            <h2 align="center">Smartwatch</h2>
+            <div class="product-sm">
+                <div class="product-sms">
+
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTQTOSR7eWalJHZRvVbI42qJhmYuPQMd3weIpjV1YIGp9ahQmtin6ygxZTQB77SDh5NjEiMwLTX-5tVtCz2FR3vtOsf9w8Zp3KaLnJT4ScRiKQWjA2yLZjv"
+                        alt="Smartphone">
+                    <h3>Boult Crown</h3>
+                    <p>Latest 5G enabled smartphone with OLED display.</p>
+                    <h4>₹3,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹8,999</span>
+                    </h4>
+                    <a href="product_details.html?id=boult-crown"><button>BuyNow</button></a>
+                </div>
+                <div class="product-sms">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTN0yk3LqkIM3EAAn0xS6cJbfnxIOp3iFI-Qh-zUsp4GEtgbJ_5xp_7gTRQ0iRlXoxJWdmA2PxXFAfpRN-a8UBaVxse7gLmUa0zyPiJNcdNmyEPZtSv6_6gBQ"
+                        alt="Smartphone">
+                    <h3>Boat Enigma</h3>
+                    <p>Latest 5G enabled smartphone with OLED display.</p>
+                    <h4>₹1,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹3,999</span>
+                    </h4>
+                    <a href="product_details.html?id=boat-enigma"><button>BuyNow</button></a>
+
+                </div>
+                <div class="product-sms">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQepZj8GoGjBHbroRaUNJqGPUKK6ST62GHYpa3T3HD-4wPtwTLC-gnPjmaWgYIq-2NjiF5h5nZ80eVRKY9pUvh5NhnqDQvS_eHTdeR9QtwSejctD_i-wNMy"
+                        alt="Smartphone">
+                    <h3>Samsung Watch7</h3>
+                    <p>Latest 5G enabled smartphone with OLED display.</p>
+                    <h4>₹2,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹4,999</span>
+                    </h4>
+                    <a href="product_details.html?id=samsung-watch7"><button>BuyNow</button></a>
+                </div>
+                <div class="product-sms">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTdhQZihZ3BgnO9ZViyzIcev5nhOclFtM41m-MyfLQ-4eoDmGA-HvYuU1tkSwhs5X1N6NRSApoaaEFzhGjQoPzri-1E9pTrCg70P8rbCcB0HWpcP_Iz6GYKyw"
+                        alt="Smartphone">
+                    <h3>Noise Corolfit</h3>
+                    <p>Latest 5G enabled smartphone with OLED display.</p>
+                    <h4>₹1,549 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹5,999</span>
+                    </h4>
+                    <a href="product_details.html?id=noise-colorfit"><button>BuyNow</button></a>
+                </div>
+                <div class="product-sms">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSKChKZsq8eNKBoNJThrAO5Z_IZkjDQ1t3DziVufpqBG738ez4BHpwr4W427utCq7EiosrsX9vnQBFYxMqXosGClIgL_Hn_KdF_mXD6Nre9rfBxuGtEyKkvYg"
+                        alt="Smartphone">
+                    <h3>Redmi A4</h3>
+                    <p>Latest 5G enabled smartphone with OLED display.</p>
+                    <h4>₹3,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹10,999</span>
+                    </h4>
+                    <a href="product_details.html?id=redmi-a4-watch"><button>BuyNow</button></a>
+                </div>
+                <div class="product-sms">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSz6PWLMP5Nvdvh9CfB3ovS0IvvixCqbYQuZgzpSeMnD-O0ZwJcRRDPPMEE_mYSpYVkBeNaClopXomZ1BQfdgTkHCtRo1GXrIDHUA2WRduqIT9hkYJRV2mvQw"
+                        alt="Smartphone">
+                    <h3>Fastack Revolt</h3>
+                    <p>Latest 5G enabled smartphone with OLED display.</p>
+                    <h4>₹8,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹11,999</span>
+                    </h4>
+                    <a href="product_details.html?id=fastrack-revolt"><button>BuyNow</button></a>
+                </div>
+        </section>
+        <section class="products">
+            <h2 align="center">SmartTv</h2>
+            <div class="product-tv">
+                <div class="product-tvs">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSf96bz-BvDeVKeppYCMXzr0F7P0AFufC0h3bEVsP0wzZWG9gPcigcro2QYc5lxfzZn4vUR1iuoKs6sxP5juEAS6KN7Cx-5IqYW5_IgHzSaExc_rYE5ZVRO8w"
+                        alt="Smartphone">
+                    <h3>Samsung</h3>
+                    <p> Samsung 43 inch" Class Quantum 4K UHD QLED HDR Smart TV2 x AAA Batteries
+                        VIZIO Voice Remote</p>
+                    <h4>₹13,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹18,999</span>
+                    </h4>
+                    <a href="product_details.html?id=samsung-tv"><button>BuyNow</button></a>
+                </div>
+                <div class="product-tvs">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcREZ810MDiGLGFxDR4pxNWWHJlhgMS3r-TinQ38AJUVlFGLWTbbScupphIYEDDVta8v-qa4diwos_mtm9BrhpXRVziUjHsBdVkm7O2cyf67rfR_avLfakk0"
+                        alt="Smartphone">
+                    <h3>Sony </h3>
+                    <p>Sony 40 inch Class 1080p HDR Smart TVStandRemote control2 x AAA batteriesAttached power cord.</p>
+                    <h4>₹7,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹15,999</span>
+                    </h4>
+                    <a href="product_details.html?id=sony-tv"><button>BuyNow</button></a>
+
+                </div>
+                <div class="product-tvs">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRLMwt23UgaSRyunecXpRVhAHacDPZzcpzVz0T0pMCAx-e6fBtPj8IVF76OHu1V5kSa83ya03P2qfH_NkAJgogzLZXbACpaFiRJE-2dkDNitplvLiIkGdv7"
+                        alt="Smartphone">
+                    <h3>Vizio</h3>
+                    <p>Vizio 32 inch Class Select Series Full HD Smart TVRoku Voice RemoteDocumentation.</p>
+                    <h4>₹10,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹19,999</span>
+                    </h4>
+                    <a href="product_details.html?id=vizio-tv"><button>BuyNow</button></a>
+                </div>
+                <div class="product-tvs">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQMFG2KYBEDQT7OPXObBIdxgwQMc5ykDD6ST95ripczEMrAv0SYIgX5srNLyBu2vwe2EOKryeNCLaJkJLjXjRyglUqfSQwNGJWdfF1TMvw"
+                        alt="Smartphone">
+                    <h3>LG</h3>
+                    <p>LG 43" Class QNED80T Series QNED 4K Smart TV</p>
+                    <h4>₹20,999 <span
+                            style="text-decoration: line-through red;color: red; font-size: 13px;">₹25,999</span>
+                    </h4>
+                    <a href="product_details.html?id=lg-tv"><button>BuyNow</button></a>
+
+
+        </section>
+        <footer style="background-color: #111; color: #fff; padding: 40px 20px 10px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+                <div style="flex: 1 1 220px; margin: 10px;">
+                    <h3 style="color: #00ccff;">Electro Gadget</h3>
+                    <p>Your one-stop shop for the latest electronics & gadgets.</p>
+                </div>
+
+                <div style="flex: 1 1 220px; margin: 10px;">
+                    <h4 style="color: #00ccff;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Home</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Shop</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Deals</a></li>
+                        <li><a href="#" style="color: #ccc; text-decoration: none;">Support</a></li>
+                    </ul>
+                </div>
+
+                <div style="flex: 1 1 220px; margin: 10px;">
+                    <h4 style="color: #00ccff;">Contact Us</h4>
+                    <p>Email: support@electrogadget.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+
+                <div style="flex: 1 1 220px; margin: 10px;">
+                    <h4 style="color: #00ccff;">Follow Us</h4>
+                    <div id="ic">
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=435&format=png" alt="Facebook"
+                                style="width: 24px; margin-right: 10px; filter: brightness(0) invert(1);"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=32292&format=png" alt="Instagram"
+                                style="width: 24px; margin-right: 10px; filter: brightness(0) invert(1);"></a>
+                        <a href="#"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png" alt="Twitter"
+                                style="width: 24px; margin-right: 10px; filter: brightness(0) invert(1);"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                style="text-align: center; padding-top: 20px; border-top: 1px solid #444; font-size: 14px; color: #999;">
+                <p>&copy; 2025 Electro Gadget. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="auth.js"></script>
+</body>
+</section>
+
+</html>

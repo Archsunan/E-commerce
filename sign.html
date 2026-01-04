@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Electrolize&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: rgb(94, 127, 158);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #17191b;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    header h1 {
+      font-family: "Electrolize", sans-serif;
+      font-weight: bolder;
+      font-size: 60px;
+      /* animation: slideIn 2s ease-in-out forwards; */
+      /* opacity: 0; */
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 2px;
+    }
+
+    nav a:hover {
+      color: wheat;
+      background-color: #777;
+
+    }
+
+    .signup-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .signup-box {
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      width: 350px;
+    }
+
+    .signup-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .signup-box input[type="text"],
+    .signup-box input[type="email"],
+    .signup-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .signup-box input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #5ea1ff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .signup-box input[type="submit"]:hover {
+      background: #4ebbe9;
+    }
+
+    .signup-box p {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .signup-box a {
+      color: #5ebfff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="typing mx-auto d-inline-block ">ElectroGadgets</h1>
+    <nav>
+      <a href="ex.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="product.html">Products</a>
+      <a href="cont.html">Contact</a>
+      <a href="cart.html" id="cart-link">Cart</a>
+      <a href="login.html">Login</a>/
+      <a href="sign.html">SignUp</a>
+    </nav>
+  </header>
+  <div class="signup-container">
+    <div class="signup-box">
+      <h2>Create Account</h2>
+      <form id="signupForm">
+        <label for="fullname">Enter Your FullName</label>
+        <input type="text" id="fullname" placeholder="Full Name" required>
+        <label for="email">Enter Your Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+        <label for="password">Enter Password</label>
+        <input type="password" id="password" placeholder="Password" required>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+        <input type="submit" value="Sign Up">
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </div>
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById('fullname').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      signUp(name, email, password);
+    });
+  </script>
+
+
+</html>
